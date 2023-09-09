@@ -67,9 +67,7 @@ public class TGItems implements ITGInitializer {
 	public static Item MAGIC_BULLET_LIGHTNING;
 	public static Item MAGIC_BULLET_FIRE;
 
-	/**
-	 * MATERIALS
-	 */
+	// Materials
 	public static Item HEAVY_CLOTH;
 	public static Item PROTECTIVE_FIBER;
 	
@@ -94,18 +92,16 @@ public class TGItems implements ITGInitializer {
 	public static Item STOCK_PLASTIC;
 	public static Item STOCK_CARBON;
 	
-	/**
-	 * Metals
-	 */
+	//Metals
 	public static Item STEAMARMOR_PLATE;
-	/*public static Item PLATE_IRON;
+	public static Item PLATE_IRON;
 	public static Item PLATE_COPPER;
 	public static Item PLATE_TIN;
 	public static Item PLATE_BRONZE;
 	public static Item PLATE_STEEL;
 	public static Item PLATE_OBSIDIAN_STEEL;
 	public static Item PLATE_LEAD;
-	public static Item PLATE_TITANIUM;*/
+	public static Item PLATE_TITANIUM;
 	public static Item PLATE_CARBON;
 	
 	public static Item PLASTIC_SHEET;
@@ -192,10 +188,9 @@ public class TGItems implements ITGInitializer {
 	public static Item AS50_MAGAZINE_EXPLOSIVE;
 
 	public static Item ROCKET_HIGH_VELOCITY;
-	/**
-	 * ADDITONAL SLOT ITEMS
-	 */
-/*	public static ItemGasMask GAS_MASK;
+	
+	/*//ADDITONAL SLOT ITEMS
+	public static ItemGasMask GAS_MASK;
 	public static ItemGlider GLIDER;
 	
 	public static ItemNightVisionGoggles NIGHTVISION_GOGGLES;
@@ -343,9 +338,7 @@ public class TGItems implements ITGInitializer {
 		MAGIC_BULLET_FIRE = addItem("magic_bullet_fire", TGSlotType.AMMOSLOT);
 		MAGIC_BULLET_LIGHTNING = addItem("magic_bullet_lightning", TGSlotType.AMMOSLOT);
 
-		/**
-		 * GUNPARTS
-		 */
+		//Gun Parts
 		RECEIVER_IRON = addItem("ironreceiver");
 		RECEIVER_STEEL = addItem("steelreceiver");
 		RECEIVER_OBSIDIAN_STEEL = addItem("obsidiansteelreceiver");
@@ -363,14 +356,14 @@ public class TGItems implements ITGInitializer {
 		STOCK_CARBON = addItem("carbonstock");
 
 		STEAMARMOR_PLATE = addItem("steamarmorplate");
-		/*PLATE_IRON =  addItem("plateiron");
+		PLATE_IRON =  addItem("plateiron");
 		PLATE_COPPER =  addItem("platecopper");
 		PLATE_TIN =  addItem("platetin");
 		PLATE_BRONZE =  addItem("platebronze");
 		PLATE_STEEL =  addItem("platesteel");
 		PLATE_OBSIDIAN_STEEL=  addItem("plateobsidiansteel");
 		PLATE_LEAD =  addItem("platelead");
-		PLATE_TITANIUM =  addItem("platetitanium");*/
+		PLATE_TITANIUM =  addItem("platetitanium");
 		PLATE_CARBON =  addItem("platecarbon");
 
 		PLASTIC_SHEET =  addItem("plasticsheet");
