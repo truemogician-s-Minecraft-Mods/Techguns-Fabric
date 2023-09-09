@@ -9,7 +9,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import techguns.api.render.IItemRenderer;
-import techguns.client.Keybinds;
 import techguns.client.models.ModelMultipart;
 import techguns.client.render.math.TGMatrixOps;
 

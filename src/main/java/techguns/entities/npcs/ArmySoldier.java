@@ -9,15 +9,12 @@ import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tag.BiomeTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import techguns.*;
-
-import java.util.Random;
 
 public class ArmySoldier extends GenericHuman{
     public ArmySoldier(EntityType<? extends GenericNPC> entityType, World world) {

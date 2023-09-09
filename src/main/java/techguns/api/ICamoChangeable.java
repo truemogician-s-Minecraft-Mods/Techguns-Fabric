@@ -1,12 +1,12 @@
 package techguns.api;
 
-import java.util.List;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 import techguns.TGCamos;
 import techguns.TGCamos.CamoEntry;
+
+import java.util.List;
 
 public interface ICamoChangeable {
 	public int getCamoCount();

@@ -1,6 +1,5 @@
 package techguns.client.render.fx;
 
-import joptsimple.util.KeyValuePair;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
 

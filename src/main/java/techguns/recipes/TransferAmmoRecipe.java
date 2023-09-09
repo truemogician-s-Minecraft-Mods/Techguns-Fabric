@@ -2,7 +2,6 @@ package techguns.recipes;
 
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.CraftingInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;

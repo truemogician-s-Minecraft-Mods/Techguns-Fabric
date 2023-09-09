@@ -1,20 +1,18 @@
 package techguns.client.render;
 
-import net.minecraft.client.render.*;
-import net.minecraft.util.Util;
-import org.lwjgl.opengl.GL11;
-
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.*;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LightType;
+import org.lwjgl.opengl.GL11;
 import techguns.client.render.fx.IScreenEffect.RenderType;
 import techguns.mixin.LightmapTextureManagerAccessor;
 

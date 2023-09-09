@@ -1,15 +1,10 @@
 package techguns.client.render.entities;
 
-import java.util.Random;
-
 import net.minecraft.client.model.Model;
 import net.minecraft.client.render.*;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.client.util.math.Vector3d;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -19,14 +14,10 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LightType;
 import techguns.TGIdentifier;
 import techguns.client.models.projectiles.ModelGrapplingHookProjectile;
-import techguns.client.models.projectiles.ModelRocket;
-import techguns.client.render.TGRenderHelper;
 import techguns.client.render.math.TGMatrixOps;
 import techguns.entities.projectiles.EnumBulletFirePos;
-import techguns.entities.projectiles.GenericProjectile;
 import techguns.entities.projectiles.GrapplingHookProjectile;
 import techguns.entities.projectiles.GrapplingHookProjectile.GrapplingStatus;
-import techguns.entities.projectiles.RocketProjectile;
 import techguns.util.MathUtil;
 
 public class RenderGrapplingHookProjectile extends EntityRenderer<GrapplingHookProjectile>{

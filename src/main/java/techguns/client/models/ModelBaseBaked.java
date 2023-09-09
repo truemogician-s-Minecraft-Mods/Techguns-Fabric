@@ -11,6 +11,7 @@ import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
+
 import java.util.function.Function;
 
 public class ModelBaseBaked extends ModelMultipart {

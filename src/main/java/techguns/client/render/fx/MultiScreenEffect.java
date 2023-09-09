@@ -1,9 +1,9 @@
 package techguns.client.render.fx;
 
-import java.util.ArrayList;
-
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
+
+import java.util.ArrayList;
 
 public class MultiScreenEffect implements IScreenEffect {
 

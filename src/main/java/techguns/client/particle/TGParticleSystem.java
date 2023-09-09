@@ -1,8 +1,5 @@
 package techguns.client.particle;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
@@ -10,7 +7,6 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleTextureSheet;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.VertexConsumerProvider.Immediate;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
@@ -18,13 +14,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Matrix4f;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.client.ClientProxy;
 import techguns.client.particle.TGParticleSystemType.DirResult;
 import techguns.util.EntityCondition;
 import techguns.util.MathUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A particle system which spawns particles

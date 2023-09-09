@@ -14,8 +14,6 @@ import techguns.TGEntities;
 import techguns.TGIdentifier;
 import techguns.TGuns;
 
-import java.util.Random;
-
 public class ZombiePoliceman extends GenericZombieEntity {
     public ZombiePoliceman(EntityType<? extends GenericNPC> entityType, World world) {
         super(entityType, world);

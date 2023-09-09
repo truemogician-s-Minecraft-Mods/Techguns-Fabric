@@ -1,26 +1,23 @@
 package techguns.client.modelloader;
 
+import net.fabricmc.fabric.api.client.model.ModelProviderContext;
+import net.fabricmc.fabric.api.client.model.ModelProviderException;
+import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.model.UnbakedModel;
+import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.resource.Resource;
+import net.minecraft.resource.ResourceManager;
+import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
+import techguns.Techguns;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
-
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.util.ModelIdentifier;
-import net.minecraft.resource.Resource;
-import org.jetbrains.annotations.Nullable;
-
-import net.fabricmc.fabric.api.client.model.ModelProviderContext;
-import net.fabricmc.fabric.api.client.model.ModelProviderException;
-import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
-import net.minecraft.client.render.model.UnbakedModel;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
-import techguns.Techguns;
 
 public class TGObjLoader implements ModelResourceProvider, Function<ResourceManager, ModelResourceProvider> {
 	public static final TGObjLoader INSTANCE = new TGObjLoader();

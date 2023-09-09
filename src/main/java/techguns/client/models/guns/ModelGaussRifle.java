@@ -1,12 +1,12 @@
 package techguns.client.models.guns;
 
 import net.minecraft.client.render.RenderLayer;
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import techguns.client.models.ModelMultipart;
+import techguns.client.models.ModelPart;
 
 public class ModelGaussRifle extends ModelMultipart {
     public ModelPart Scope4;

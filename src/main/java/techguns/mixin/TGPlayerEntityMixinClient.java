@@ -1,17 +1,5 @@
 package techguns.mixin;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.item.Item;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -19,21 +7,20 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import techguns.TGEntityAttributes;
 import techguns.TGPacketsC2S;
 import techguns.api.client.entity.ITGExtendedPlayerClient;
 import techguns.api.entity.ITGExtendedPlayer;
 import techguns.api.guns.IGenericGun;
 import techguns.client.ClientProxy;
-import techguns.items.guns.GenericGun;
 import techguns.items.guns.GenericGunCharge;
-import techguns.items.guns.GenericGunMeleeCharge;
 import techguns.packets.c2s.PacketShootGun;
 import techguns.packets.c2s.PacketShootGunTarget;
-import techguns.util.BlockUtil;
-
-import java.util.List;
 
 @Mixin(PlayerEntity.class)
 public abstract class TGPlayerEntityMixinClient extends LivingEntity implements ITGExtendedPlayerClient {

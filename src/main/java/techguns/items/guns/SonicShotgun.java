@@ -1,25 +1,19 @@
 package techguns.items.guns;
 
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Quaternion;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.TGPacketsS2C;
 import techguns.entities.projectiles.EnumBulletFirePos;
-import techguns.entities.projectiles.GenericProjectile;
 import techguns.entities.projectiles.SonicShotgunProjectile;
 import techguns.items.guns.ammo.DamageModifier;
 import techguns.packets.PacketEntityAdditionalSpawnData;
 import techguns.util.MathUtil;
-
-import java.util.HashSet;
 
 public class SonicShotgun extends GenericGun {
     public SonicShotgun(String name, ProjectileSelector projectileSelector, boolean semiAuto, int minFiretime, int clipsize, int reloadtime, float damage, SoundEvent firesound, SoundEvent reloadsound, int TTL, float accuracy) {

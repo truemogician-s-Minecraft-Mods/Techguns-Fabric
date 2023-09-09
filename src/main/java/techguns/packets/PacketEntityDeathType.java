@@ -4,10 +4,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Vec3d;
 import techguns.TGConfig;
 import techguns.TGPacketsS2C;
-import techguns.client.ClientProxy;
 import techguns.client.deatheffects.DeathEffectHandler;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
 

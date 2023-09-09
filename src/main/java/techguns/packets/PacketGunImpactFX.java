@@ -1,7 +1,5 @@
 package techguns.packets;
 
-import java.util.BitSet;
-
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.sound.SoundCategory;
@@ -11,6 +9,8 @@ import techguns.TGPacketsS2C;
 import techguns.TGSounds;
 import techguns.client.ClientProxy;
 import techguns.util.DataUtil;
+
+import java.util.BitSet;
 
 public class PacketGunImpactFX extends TGBasePacket {
 	short soundType;

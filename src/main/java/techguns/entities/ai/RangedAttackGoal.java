@@ -4,11 +4,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.RangedAttackMob;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.item.BowItem;
 import net.minecraft.util.Hand;
 import techguns.api.guns.IGenericGun;
-import techguns.api.npc.INPCTechgunsShooter;
-import techguns.entities.npcs.GenericNPC;
 
 import java.util.EnumSet;
 

@@ -15,7 +15,6 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.spongepowered.asm.mixin.Unique;
 import techguns.TGCamos;
 import techguns.api.ICamoChangeable;
 import techguns.api.entity.AttackTime;

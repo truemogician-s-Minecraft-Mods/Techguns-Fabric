@@ -1,14 +1,7 @@
 package techguns.damagesystem;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Random;
 import com.mojang.datafixers.util.Pair;
-
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import it.unimi.dsi.fastutil.objects.ObjectListIterator;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
@@ -23,12 +16,13 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult.Type;
 import net.minecraft.util.math.*;
-
-import net.minecraft.world.explosion.Explosion;
-import net.minecraft.world.explosion.Explosion.DestructionType;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
+import net.minecraft.world.explosion.Explosion.DestructionType;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
+
+import java.util.*;
 
 public class TGExplosion {
 	

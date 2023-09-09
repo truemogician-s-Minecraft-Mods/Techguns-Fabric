@@ -1,18 +1,15 @@
 package techguns.client;
 
-import java.util.HashMap;
-
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.text.Text;
-import org.lwjgl.glfw.GLFW;
-
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
+import org.lwjgl.glfw.GLFW;
 import techguns.ITGInitializer;
 import techguns.TGPacketsC2S;
 import techguns.api.client.entity.ITGExtendedPlayerClient;
@@ -26,6 +23,8 @@ import techguns.items.guns.GenericGun;
 import techguns.keybind.TGKeybindID;
 import techguns.packets.c2s.PacketTGKeybindPress;
 import techguns.util.InventoryUtil;
+
+import java.util.HashMap;
 
 public class Keybinds implements ITGInitializer{
 	public static final String TECHGUNS_CATEGORY = "techguns.key.categories.techguns";

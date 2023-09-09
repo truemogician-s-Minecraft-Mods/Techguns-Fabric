@@ -1,9 +1,5 @@
 package techguns.client.particle;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -11,6 +7,10 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.client.render.fx.IScreenEffect.RenderType;
 import techguns.util.MathUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * the parameters for a particle system and its particles are specified in its type

@@ -3,7 +3,6 @@ package techguns;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.util.registry.Registry;
-import techguns.damagesystem.TGDamageSource;
 
 import java.util.ArrayList;
 import java.util.List;

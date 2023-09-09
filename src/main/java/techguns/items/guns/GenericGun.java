@@ -1,10 +1,5 @@
 package techguns.items.guns;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -26,20 +21,11 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Arm;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.UseAction;
+import net.minecraft.util.*;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.*;
 import techguns.api.ICamoChangeable;
@@ -54,7 +40,6 @@ import techguns.client.render.ITGItemRenderer;
 import techguns.damagesystem.TGDamageSource;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
 import techguns.entities.ai.RangedAttackGoal;
-import techguns.entities.npcs.GenericNPC;
 import techguns.entities.projectiles.EnumBulletFirePos;
 import techguns.entities.projectiles.GenericProjectile;
 import techguns.items.GenericItem;
@@ -70,6 +55,11 @@ import techguns.util.EntityCondition;
 import techguns.util.InventoryUtil;
 import techguns.util.SoundUtil;
 import techguns.util.TextUtil;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class GenericGun extends GenericItem implements IGenericGun, ITGItemRenderer, ICamoChangeable {
 	public static final float SOUND_DISTANCE=4.0f;

@@ -1,6 +1,5 @@
 package techguns.client.models.guns;
 
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
@@ -11,6 +10,7 @@ import net.minecraft.util.Identifier;
 import techguns.TGIdentifier;
 import techguns.api.guns.IGenericGun;
 import techguns.client.models.ModelMultipart;
+import techguns.client.models.ModelPart;
 import techguns.client.render.math.TGMatrixOps;
 import techguns.items.guns.GenericGunMeleeCharge;
 

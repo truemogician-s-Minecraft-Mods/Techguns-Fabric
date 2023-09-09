@@ -1,10 +1,10 @@
 package techguns.api.guns;
 
-import java.util.Iterator;
-
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+
+import java.util.Iterator;
 
 public class GunManager {
 

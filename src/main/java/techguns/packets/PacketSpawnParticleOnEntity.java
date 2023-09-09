@@ -1,7 +1,5 @@
 package techguns.packets;
 
-import java.nio.charset.StandardCharsets;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketByteBuf;
@@ -10,6 +8,8 @@ import techguns.TGPacketsS2C;
 import techguns.client.ClientProxy;
 import techguns.util.EntityCondition;
 import techguns.util.TGLogger;
+
+import java.nio.charset.StandardCharsets;
 
 public class PacketSpawnParticleOnEntity extends TGBasePacket {
 

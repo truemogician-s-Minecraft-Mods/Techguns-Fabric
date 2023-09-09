@@ -1,8 +1,5 @@
 package techguns.client.particle;
 
-import java.util.Comparator;
-import java.util.Iterator;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -13,6 +10,9 @@ import net.minecraft.util.math.Matrix4f;
 import net.minecraft.util.math.Vec3d;
 import techguns.TGConfig;
 import techguns.client.particle.ParticleList.ParticleListIterator;
+
+import java.util.Comparator;
+import java.util.Iterator;
 
 
 public class TGParticleManager {

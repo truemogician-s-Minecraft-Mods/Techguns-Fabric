@@ -1,10 +1,10 @@
 package techguns.client.particle;
 
-import java.util.List;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public abstract class TGFXType {
 	public String name;

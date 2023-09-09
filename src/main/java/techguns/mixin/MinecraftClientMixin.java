@@ -1,25 +1,20 @@
 package techguns.mixin;
 
-import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.WindowEventHandler;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.thread.ReentrantThreadExecutor;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.WindowEventHandler;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.thread.ReentrantThreadExecutor;
 import techguns.TGPacketsC2S;
 import techguns.api.client.ClientDisconnectEvent;
 import techguns.client.ShooterValues;
@@ -28,8 +23,6 @@ import techguns.items.guns.GenericGunMeleeCharge;
 import techguns.packets.c2s.PacketClientSwingRecoil;
 import techguns.sounds.TGSoundCategory;
 import techguns.util.SoundUtil;
-
-import java.util.Map;
 
 @Mixin(MinecraftClient.class)
 public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runnable> implements WindowEventHandler{

@@ -1,6 +1,5 @@
 package techguns.entities.projectiles;
 
-import com.google.common.collect.Lists;
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;

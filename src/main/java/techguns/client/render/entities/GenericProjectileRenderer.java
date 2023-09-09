@@ -1,14 +1,10 @@
 package techguns.client.render.entities;
 
-import java.util.Random;
-
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.client.util.math.Vector3d;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Matrix4f;
@@ -16,6 +12,8 @@ import net.minecraft.util.math.Vec3f;
 import techguns.TGIdentifier;
 import techguns.client.render.TGRenderHelper;
 import techguns.entities.projectiles.GenericProjectile;
+
+import java.util.Random;
 
 public class GenericProjectileRenderer extends RenderLateEntityRenderer<GenericProjectile>{
 	private static final Identifier bulletTextures = new TGIdentifier("textures/entity/bullet1.png");

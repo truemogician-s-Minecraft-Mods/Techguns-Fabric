@@ -1,7 +1,5 @@
 package techguns;
 
-import java.util.function.Supplier;
-
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
@@ -14,6 +12,8 @@ import net.minecraft.util.Identifier;
 import techguns.packets.PacketCraftAmmoBench;
 import techguns.packets.TGBasePacket;
 import techguns.packets.c2s.*;
+
+import java.util.function.Supplier;
 
 public class TGPacketsC2S {
 

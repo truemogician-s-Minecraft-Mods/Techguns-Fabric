@@ -1,12 +1,5 @@
 package techguns.client.particle;
 
-import java.net.URL;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -16,6 +9,9 @@ import techguns.client.particle.TGParticleSystemType.AlphaEntry;
 import techguns.client.particle.TGParticleSystemType.ColorEntry;
 import techguns.client.render.fx.IScreenEffect.RenderType;
 import techguns.util.TGLogger;
+
+import java.net.URL;
+import java.util.*;
 
 
 /**

@@ -1,21 +1,15 @@
 package techguns.client.models.guns;
 
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.render.VertexConsumer;
-import org.lwjgl.opengl.GL11;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import techguns.api.guns.IGenericGun;
 import techguns.client.models.ModelMultipart;
-import techguns.client.render.TGRenderHelper;
-import techguns.client.render.fx.IScreenEffect.RenderType;
+import techguns.client.models.ModelPart;
 import techguns.util.MathUtil;
 
 public class ModelNDR extends ModelMultipart {

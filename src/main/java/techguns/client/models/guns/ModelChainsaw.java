@@ -2,7 +2,6 @@ package techguns.client.models.guns;
 
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
@@ -11,6 +10,7 @@ import net.minecraft.util.Identifier;
 import techguns.TGIdentifier;
 import techguns.api.guns.IGenericGun;
 import techguns.client.models.ModelMultipart;
+import techguns.client.models.ModelPart;
 import techguns.items.guns.GenericGunMeleeCharge;
 
 public class ModelChainsaw extends ModelMultipart {

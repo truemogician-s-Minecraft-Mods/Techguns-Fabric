@@ -1,7 +1,6 @@
 package techguns.client.models.guns;
 
 
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
@@ -13,7 +12,7 @@ import net.minecraft.util.Identifier;
 import techguns.api.entity.ITGExtendedPlayer;
 import techguns.api.guns.IGenericGun;
 import techguns.client.models.ModelMultipart;
-import techguns.client.render.TGRenderHelper;
+import techguns.client.models.ModelPart;
 import techguns.items.guns.GenericGun;
 
 public class ModelGuidedMissileLauncher extends ModelMultipart {

@@ -1,10 +1,10 @@
 package techguns.items.guns;
 
-import java.util.HashMap;
-
 import techguns.entities.projectiles.GenericProjectile;
 import techguns.items.guns.ammo.AmmoType;
 import techguns.items.guns.ammo.AmmoVariant;
+
+import java.util.HashMap;
 
 public class ProjectileSelector<T extends GenericProjectile> {
 

@@ -12,8 +12,6 @@ import techguns.sounds.TGSoundCategory;
 import techguns.util.EntityCondition;
 import techguns.util.MathUtil;
 
-import java.util.Random;
-
 @Environment(EnvType.CLIENT)
 public class TGSound extends MovingSoundInstance {
 

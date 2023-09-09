@@ -13,8 +13,6 @@ import techguns.TGCamos;
 import techguns.TGEntities;
 import techguns.TGuns;
 
-import java.util.Random;
-
 public class ZombieFarmer extends GenericZombieEntity {
     public ZombieFarmer(EntityType<? extends GenericNPC> entityType, World world) {
         super(entityType, world);

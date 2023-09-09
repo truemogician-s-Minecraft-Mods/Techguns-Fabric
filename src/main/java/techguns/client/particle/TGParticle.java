@@ -1,23 +1,17 @@
 package techguns.client.particle;
 
-import java.awt.Color;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Stream;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleTextureSheet;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.Camera;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Matrix4f;
@@ -27,8 +21,10 @@ import net.minecraft.world.World;
 import techguns.client.particle.TGParticleSystemType.AlphaEntry;
 import techguns.client.particle.TGParticleSystemType.ColorEntry;
 import techguns.client.render.TGRenderHelper;
-import techguns.mixin.CameraAccessor;
 import techguns.util.MathUtil;
+
+import java.awt.*;
+import java.util.LinkedList;
 
 
 /**

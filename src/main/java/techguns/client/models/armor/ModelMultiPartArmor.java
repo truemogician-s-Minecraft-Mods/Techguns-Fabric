@@ -1,7 +1,9 @@
 package techguns.client.models.armor;
 
-import net.minecraft.client.model.*;
-import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.model.ModelData;
+import net.minecraft.client.model.ModelPartBuilder;
+import net.minecraft.client.model.ModelPartData;
+import net.minecraft.client.model.ModelTransform;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
@@ -10,8 +12,6 @@ import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import techguns.client.models.ModelMultipart;
-
-import java.util.function.Function;
 
 public class ModelMultiPartArmor extends ModelMultipart {
     protected BipedEntityModel model;

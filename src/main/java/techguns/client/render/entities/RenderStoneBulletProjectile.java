@@ -1,7 +1,6 @@
 package techguns.client.render.entities;
 
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.util.Identifier;
 import techguns.TGIdentifier;

@@ -1,9 +1,9 @@
 package techguns.client.render;
 
-import java.util.HashMap;
-
 import net.minecraft.item.Item;
 import techguns.api.render.IItemRenderer;
+
+import java.util.HashMap;
 
 public class TGRenderRegistries {
 	protected static HashMap<Item, IItemRenderer> renderRegistry = new HashMap<>();

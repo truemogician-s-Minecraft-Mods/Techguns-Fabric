@@ -1,5 +1,7 @@
 package techguns.mixin;
 
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.Mouse;
 import net.minecraft.client.util.SmoothUtil;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -7,17 +9,13 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.Mouse;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import techguns.api.entity.ITGExtendedPlayer;
 import techguns.api.guns.GunManager;
 import techguns.api.guns.IGenericGun;
 import techguns.client.ClientProxy;
-import techguns.client.particle.ParticleList;
-import techguns.items.guns.GenericGunCharge;
 import techguns.client.ShooterValues;
+import techguns.items.guns.GenericGunCharge;
 
 @Mixin(Mouse.class)
 public class MouseMixin {

@@ -2,25 +2,21 @@ package techguns.client.render;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.option.GameOptions;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Matrix4f;
 import techguns.TGIdentifier;
 import techguns.api.entity.ITGExtendedPlayer;
 import techguns.api.guns.GunHandType;
 import techguns.api.guns.GunManager;
-import techguns.api.render.IItemRenderer;
-import techguns.client.render.item.RenderGunBase;
 import techguns.items.guns.EnumCrosshairStyle;
 import techguns.items.guns.GenericGun;
 import techguns.util.InventoryUtil;

@@ -1,11 +1,7 @@
 package techguns.client.deatheffects;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.model.ModelPart;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.client.render.entity.model.*;
@@ -13,27 +9,23 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.WitherSkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Vec3d;
-import techguns.TGEntities;
 import techguns.TGIdentifier;
 import techguns.TGSounds;
 import techguns.api.entity.ITGLivingEntity;
 import techguns.api.render.ITGAnimalModel;
 import techguns.client.ClientProxy;
-import techguns.client.models.gibs.ModelGibs;
-import techguns.client.models.gibs.ModelGibsAnimal;
 import techguns.client.particle.TGFX;
 import techguns.client.particle.TGFXType;
 import techguns.client.particle.TGParticleSystem;
 import techguns.client.particle.TGParticleSystemType;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
-import techguns.entities.projectiles.FlyingGibs;
 import techguns.sounds.TGSoundCategory;
-import net.minecraft.client.world.ClientWorld;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class DeathEffectHandler {
 	

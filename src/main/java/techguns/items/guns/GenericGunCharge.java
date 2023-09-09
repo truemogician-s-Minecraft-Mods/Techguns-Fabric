@@ -1,7 +1,5 @@
 package techguns.items.guns;
 
-import java.util.Arrays;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
@@ -29,6 +27,8 @@ import techguns.sounds.TGSoundCategory;
 import techguns.util.EntityCondition;
 import techguns.util.InventoryUtil;
 import techguns.util.SoundUtil;
+
+import java.util.Arrays;
 
 public class GenericGunCharge extends GenericGun {
 

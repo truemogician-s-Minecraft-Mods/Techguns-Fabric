@@ -34,8 +34,6 @@ import techguns.packets.PacketPlaySound;
 import techguns.packets.PacketSpawnParticle;
 import techguns.sounds.TGSoundCategory;
 
-import java.time.Clock;
-
 public class BioGunProjectile extends GenericProjectile{
 
 	public int level;

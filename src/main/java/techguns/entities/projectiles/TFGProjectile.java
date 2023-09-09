@@ -12,7 +12,6 @@ import techguns.TGPacketsS2C;
 import techguns.TGSounds;
 import techguns.api.damagesystem.DamageType;
 import techguns.client.ClientProxy;
-import techguns.sounds.TGSoundCategory;
 import techguns.damagesystem.TGDamageSource;
 import techguns.damagesystem.TGExplosion;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
@@ -20,6 +19,7 @@ import techguns.items.guns.GenericGun;
 import techguns.items.guns.IChargedProjectileFactory;
 import techguns.packets.PacketPlaySound;
 import techguns.packets.PacketSpawnParticle;
+import techguns.sounds.TGSoundCategory;
 
 
 public class TFGProjectile extends GenericProjectile{

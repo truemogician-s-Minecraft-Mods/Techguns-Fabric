@@ -1,9 +1,7 @@
 package techguns.client.models;
 
-import net.minecraft.client.model.Model;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.MathHelper;
 import techguns.client.render.math.TGMatrixOps;
 
 import java.util.ArrayList;

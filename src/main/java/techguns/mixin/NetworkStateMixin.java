@@ -1,11 +1,10 @@
 package techguns.mixin;
 
-import java.util.Map;
-
+import net.minecraft.network.NetworkState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
-import net.minecraft.network.NetworkState;
+import java.util.Map;
 
 @Mixin(NetworkState.class)
 public interface NetworkStateMixin {

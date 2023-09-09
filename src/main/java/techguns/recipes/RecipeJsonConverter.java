@@ -1,17 +1,7 @@
 package techguns.recipes;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.util.*;
-import java.util.stream.Collectors;
-
-import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-//import com.sun.org.apache.regexp.internal.RE;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -20,15 +10,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import techguns.TGConfig;
-import techguns.TGIdentifier;
-import techguns.TGItems;
 import techguns.Techguns;
 import techguns.items.guns.GenericGun;
 import techguns.items.guns.GenericGunMeleeCharge;
 import techguns.items.guns.ammo.AmmoType;
 import techguns.items.guns.ammo.AmmoTypes;
-import techguns.items.guns.ammo.AmmoVariant;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**

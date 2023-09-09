@@ -1,12 +1,11 @@
 package techguns.items.guns.ammo;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import techguns.TGItems;
 import techguns.util.ItemUtil;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class AmmoType {
 

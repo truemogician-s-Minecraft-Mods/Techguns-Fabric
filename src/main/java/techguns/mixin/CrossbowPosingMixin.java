@@ -1,14 +1,13 @@
 package techguns.mixin;
 
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.CrossbowPosing;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.MathHelper;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import techguns.api.entity.AttackTime;
 import techguns.api.entity.ITGShooterValues;
 

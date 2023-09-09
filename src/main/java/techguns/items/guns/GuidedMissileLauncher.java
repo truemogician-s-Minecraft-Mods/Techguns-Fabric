@@ -1,8 +1,5 @@
 package techguns.items.guns;
 
-import java.util.List;
-import java.util.Optional;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,6 +20,9 @@ import techguns.entities.projectiles.GenericProjectile;
 import techguns.entities.projectiles.GuidedMissileProjectile;
 import techguns.sounds.TGSoundCategory;
 import techguns.util.SoundUtil;
+
+import java.util.List;
+import java.util.Optional;
 
 public class GuidedMissileLauncher extends GenericGunCharge {
 	

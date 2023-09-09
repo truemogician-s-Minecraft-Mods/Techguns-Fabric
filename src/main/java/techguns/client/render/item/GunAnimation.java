@@ -1,10 +1,10 @@
 package techguns.client.render.item;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.client.util.math.MatrixStack;
 import techguns.client.render.math.TGMatrixOps;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GunAnimation {
 

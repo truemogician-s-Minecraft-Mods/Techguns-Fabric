@@ -1,7 +1,5 @@
 package techguns.damagesystem;
 
-import java.util.ArrayList;
-
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -13,6 +11,8 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import techguns.api.damagesystem.DamageType;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
+
+import java.util.ArrayList;
 
 public class TGDamageSource extends EntityDamageSource {
 

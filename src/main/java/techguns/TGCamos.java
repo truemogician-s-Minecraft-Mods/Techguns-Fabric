@@ -1,14 +1,13 @@
 package techguns;
 
-import java.util.*;
-
-import org.jetbrains.annotations.Nullable;
-
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 import techguns.api.ICamoChangeable;
+
+import java.util.*;
 
 public class TGCamos implements ITGInitializer {
 

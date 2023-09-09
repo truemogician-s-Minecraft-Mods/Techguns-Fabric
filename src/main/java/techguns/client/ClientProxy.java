@@ -1,28 +1,17 @@
 package techguns.client;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.TooltipComponentCallback;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
-import net.fabricmc.fabric.mixin.client.rendering.EntityModelLayersAccessor;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.model.Dilation;
-import net.minecraft.client.model.ModelPart;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -36,7 +25,6 @@ import techguns.client.audio.TGSound;
 import techguns.client.item.TGArmorTooltipComponent;
 import techguns.client.item.TGArmorTooltipData;
 import techguns.client.modelloader.TGObjLoader;
-import techguns.client.models.armor.ModelMultiPartArmor;
 import techguns.client.models.armor.ModelSteamArmor;
 import techguns.client.models.armor.ModelT3PowerArmor;
 import techguns.client.models.armor.ModelT4PowerArmorMk2;
@@ -53,10 +41,10 @@ import techguns.client.render.entities.*;
 import techguns.client.render.fx.ScreenEffect;
 import techguns.client.render.item.*;
 import techguns.inventory.slots.SlotTagItem;
-import techguns.mixin.MinecraftClientAccessor;
-import techguns.mixin.MinecraftClientMixin;
 import techguns.sounds.TGSoundCategory;
 import techguns.util.EntityCondition;
+
+import java.util.List;
 
 public class ClientProxy implements ClientModInitializer {
 	public static ClientProxy INSTANCE;

@@ -1,9 +1,8 @@
 package techguns.mixin;
 
+import net.minecraft.client.render.Camera;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
-
-import net.minecraft.client.render.Camera;
 
 @Mixin(Camera.class)
 public interface CameraAccessor {

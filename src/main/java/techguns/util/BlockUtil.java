@@ -2,6 +2,7 @@ package techguns.util;
 
 //import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 //import net.fabricmc.fabric.api.tool.attribute.v1.ToolManager;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -13,7 +14,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 import techguns.items.guns.GenericGunMeleeCharge;
-import techguns.mixin.ShovelItemAccessor;
 
 import java.util.Iterator;
 import java.util.LinkedList;

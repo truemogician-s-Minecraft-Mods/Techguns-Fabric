@@ -1,7 +1,5 @@
 package techguns;
 
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.registry.Registry;

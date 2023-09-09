@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import techguns.entities.ai.RangedAttackGoal;
-import techguns.entities.npcs.GenericNPC;
 
 
 public interface IGenericGun {

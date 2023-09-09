@@ -1,13 +1,11 @@
 package techguns.entities.projectiles;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
@@ -15,7 +13,10 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.math.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.TGEntities;
 import techguns.TGPacketsS2C;
@@ -28,9 +29,6 @@ import techguns.damagesystem.TGExplosionIgnoreBlocks;
 import techguns.deatheffects.EntityDeathUtils;
 import techguns.items.guns.GenericGun;
 import techguns.items.guns.IChargedProjectileFactory;
-import techguns.items.guns.ammo.AmmoType;
-import techguns.items.guns.ammo.AmmoTypes;
-import techguns.items.guns.ammo.AmmoVariant;
 import techguns.packets.PacketPlaySound;
 import techguns.packets.PacketSpawnParticle;
 import techguns.sounds.TGSoundCategory;
@@ -40,8 +38,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public class MagicRifleProjectile extends GenericProjectile{
 

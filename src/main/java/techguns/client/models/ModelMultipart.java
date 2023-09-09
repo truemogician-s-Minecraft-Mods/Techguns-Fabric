@@ -1,10 +1,6 @@
 package techguns.client.models;
 
-import java.util.function.Function;
-
 import net.minecraft.client.model.Model;
-import net.minecraft.client.model.ModelCuboidData;
-import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.model.json.ModelTransformation;
@@ -14,6 +10,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import techguns.api.guns.IGenericGun;
+
+import java.util.function.Function;
 
 public abstract class ModelMultipart extends Model {
 

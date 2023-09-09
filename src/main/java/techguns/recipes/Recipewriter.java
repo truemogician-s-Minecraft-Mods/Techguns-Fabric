@@ -5,9 +5,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-
-import java.util.*;
-
 import net.minecraft.util.Pair;
 import org.apache.commons.lang3.ArrayUtils;
 import techguns.TGArmors;
@@ -18,6 +15,11 @@ import techguns.items.guns.GenericGunMeleeCharge;
 import techguns.items.guns.ammo.AmmoType;
 import techguns.items.guns.ammo.AmmoTypes;
 import techguns.items.guns.ammo.AmmoVariant;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import static techguns.TGItems.*;
 import static techguns.TGuns.*;

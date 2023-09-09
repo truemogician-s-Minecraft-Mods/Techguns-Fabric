@@ -1,10 +1,10 @@
 package techguns;
 
-import java.util.ArrayList;
-
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import java.util.ArrayList;
 
 public class TGSounds implements ITGInitializer {
 

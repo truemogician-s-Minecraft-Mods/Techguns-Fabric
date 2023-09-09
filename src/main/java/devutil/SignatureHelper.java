@@ -1,20 +1,13 @@
 package devutil;
 
+import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
+
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
-import net.minecraft.client.model.Model;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.LivingEntityRenderer;
-import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
-import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.util.math.MathHelper;
 
 public class SignatureHelper {
 

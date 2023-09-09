@@ -1,7 +1,7 @@
 package techguns.client.models.armor;
 
-import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.model.ModelPart;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
 
 public class ModelT3PowerArmorOld extends BipedEntityModel {
 

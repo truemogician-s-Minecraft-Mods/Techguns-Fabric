@@ -1,7 +1,5 @@
 package techguns.items.guns.ammo;
 
-import techguns.items.guns.ammo.DamageModifier;
-
 public class DamageModifier {
 
 	public static final DamageModifier DEFAULT_MODIFIER = new DamageModifier();

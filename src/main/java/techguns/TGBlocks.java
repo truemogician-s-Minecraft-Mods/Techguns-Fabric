@@ -2,9 +2,10 @@ package techguns;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.screen.ScreenHandlerType;
@@ -16,12 +17,8 @@ import net.minecraft.world.BlockView;
 import techguns.blocks.AmmoBenchBlock;
 import techguns.blocks.BlockBioBlob;
 import techguns.blocks.CamoBenchBlock;
-import techguns.blocks.entity.AmmoBenchBlockEntity;
-import techguns.blocks.entity.CamoBenchBlockEntity;
 import techguns.inventory.AmmoBenchScreenHandler;
 import techguns.inventory.CamoBenchScreenHandler;
-
-import java.util.function.Supplier;
 
 public class TGBlocks implements ITGInitializer {
 

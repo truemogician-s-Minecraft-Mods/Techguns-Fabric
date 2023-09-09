@@ -1,6 +1,5 @@
 package techguns.packets.c2s;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.sound.SoundEvent;

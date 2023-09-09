@@ -2,21 +2,16 @@ package techguns.recipes;
 
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
-import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
-import net.minecraft.util.Util;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import techguns.TGItems;
 import techguns.TGRecipes;
 import techguns.blocks.entity.AmmoBenchBlockEntity;
-
-import java.util.List;
 
 public class AmmoBenchRecipe implements Recipe<Inventory> {
     public static AmmoBenchRecipe.Serializer SERIALIZER;

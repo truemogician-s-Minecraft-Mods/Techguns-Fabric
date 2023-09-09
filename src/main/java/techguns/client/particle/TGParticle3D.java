@@ -1,6 +1,5 @@
 package techguns.client.particle;
 
-import it.unimi.dsi.fastutil.objects.ObjectList;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.OverlayTexture;
@@ -14,7 +13,6 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import techguns.api.render.ITGModelPart;
 import techguns.client.render.TGRenderHelper;
 import techguns.client.render.math.TGMatrixOps;
 import techguns.util.MathUtil;

@@ -1,7 +1,5 @@
 package techguns.client.render.item;
 
-import java.util.List;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.BipedEntityModel.ArmPose;
@@ -21,14 +19,14 @@ import techguns.api.entity.ITGShooterValues;
 import techguns.api.guns.GunManager;
 import techguns.api.guns.IGenericGun;
 import techguns.client.ClientProxy;
-import techguns.client.Keybinds;
 import techguns.client.models.ModelMultipart;
 import techguns.client.render.fx.GunEffect;
 import techguns.client.render.fx.IScreenEffect;
 import techguns.client.render.math.TGMatrixOps;
 import techguns.items.guns.GenericGunCharge;
-import techguns.items.guns.GrapplingHook;
 import techguns.util.MathUtil;
+
+import java.util.List;
 
 public class RenderGunBase extends RenderItemBase {
 

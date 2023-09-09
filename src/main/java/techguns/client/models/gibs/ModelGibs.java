@@ -1,13 +1,13 @@
 package techguns.client.models.gibs;
 
 
-import java.util.function.Function;
-
 import net.minecraft.client.model.Model;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+
+import java.util.function.Function;
 
 @Deprecated
 public abstract class ModelGibs extends Model{

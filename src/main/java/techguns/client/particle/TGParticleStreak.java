@@ -10,7 +10,6 @@ import net.minecraft.util.math.Matrix4f;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import techguns.client.render.TGRenderHelper;
-import techguns.mixin.CameraAccessor;
 
 public class TGParticleStreak extends TGParticle{
 

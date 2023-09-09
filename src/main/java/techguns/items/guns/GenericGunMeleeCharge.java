@@ -1,56 +1,47 @@
 package techguns.items.guns;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import net.fabricmc.fabric.impl.mininglevel.MiningLevelManagerImpl;
-import net.minecraft.block.Block;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.tag.BlockTags;
-import net.minecraft.tag.TagKey;
-import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Pair;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.world.BlockView;
-import org.jetbrains.annotations.Nullable;
-
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 import com.google.common.collect.Multimap;
-
+import net.fabricmc.fabric.impl.mininglevel.MiningLevelManagerImpl;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvent;
-
+import net.minecraft.tag.TagKey;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Pair;
 import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import techguns.TGPacketsC2S;
 import techguns.TGPacketsS2C;
 import techguns.TGSounds;
 import techguns.api.client.entity.ITGExtendedPlayerClient;
 import techguns.client.ClientProxy;
 import techguns.client.ShooterValues;
-import techguns.damagesystem.TGDamageSource;
-import techguns.deatheffects.EntityDeathUtils.DeathType;
 import techguns.packets.PacketPlaySound;
 import techguns.packets.c2s.PacketTGToolMiningUpdate;
 import techguns.sounds.TGSoundCategory;
 import techguns.util.EntityCondition;
 import techguns.util.TextUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GenericGunMeleeCharge extends GenericGunCharge {
 

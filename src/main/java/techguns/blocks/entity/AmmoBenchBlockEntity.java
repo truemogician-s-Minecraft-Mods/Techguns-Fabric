@@ -1,14 +1,10 @@
 package techguns.blocks.entity;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.math.BlockPos;
-import techguns.TGBlocks;
-import techguns.inventory.AmmoBenchScreenHandler;
 
 public class AmmoBenchBlockEntity extends TGInventoryBlockEntity {
 

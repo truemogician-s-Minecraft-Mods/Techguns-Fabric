@@ -2,18 +2,15 @@ package techguns.client.models.guns;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.player.PlayerEntity;
-import techguns.api.entity.ITGExtendedPlayer;
-import techguns.client.models.ModelPart;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
+import techguns.api.entity.ITGExtendedPlayer;
 import techguns.client.models.ModelMultipart;
-import techguns.client.render.math.TGMatrixOps;
+import techguns.client.models.ModelPart;
 import techguns.entities.projectiles.GrapplingHookProjectile;
-import techguns.util.MathUtil;
 
 
 public class ModelGrapplingHook extends ModelMultipart {

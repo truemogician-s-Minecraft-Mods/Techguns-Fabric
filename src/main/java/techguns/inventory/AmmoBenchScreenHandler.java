@@ -16,7 +16,6 @@ import net.minecraft.sound.SoundEvents;
 import techguns.TGBlocks;
 import techguns.TGItems;
 import techguns.TGRecipes;
-import techguns.api.ICamoChangeable;
 import techguns.inventory.slots.SlotTagItem;
 import techguns.recipes.AmmoBenchRecipe;
 

@@ -1,16 +1,14 @@
 package techguns.client.models.gibs;
 
-import java.util.ArrayList;
-import java.util.function.Function;
-
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.AnimalModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.Identifier;
 import techguns.api.render.ITGAnimalModel;
+
+import java.util.ArrayList;
 
 public class ModelGibsAnimal extends ModelGibs{
 	
