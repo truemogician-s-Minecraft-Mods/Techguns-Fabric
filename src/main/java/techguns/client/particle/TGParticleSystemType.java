@@ -2,12 +2,12 @@ package techguns.client.particle;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import techguns.client.render.fx.IScreenEffect.RenderType;
 import techguns.util.MathUtil;
@@ -111,7 +111,7 @@ public class TGParticleSystemType extends TGFXType{
 	String attachedSystem = null;
 	boolean particlesStickToSystem = false;
 
-	protected static Random rand = net.minecraft.util.math.random.Random.create();
+	protected static Random rand = new Random();
 
 	public static class ColorEntry {
 		public float time;

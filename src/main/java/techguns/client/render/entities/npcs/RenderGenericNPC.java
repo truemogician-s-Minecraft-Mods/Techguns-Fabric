@@ -5,7 +5,6 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
-import net.minecraft.client.render.entity.feature.HeldItemFeatureRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
@@ -30,7 +29,6 @@ public class RenderGenericNPC<T extends GenericNPC> extends MobEntityRenderer<T,
         if(legsArmorLayer!=null && bodyArmorLayer !=null) {
             this.addFeature(new ArmorFeatureRenderer(this, modelConstructor.apply(context.getPart(legsArmorLayer)), modelConstructor.apply(context.getPart(bodyArmorLayer))));
         }
-        this.addFeature(new HeldItemFeatureRenderer(this, context.getHeldItemRenderer()));
     }
 
     @Override

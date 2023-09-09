@@ -6,13 +6,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import techguns.TGArmors;
 import techguns.TGCamos;
 import techguns.TGEntities;
 import techguns.TGuns;
+
+import java.util.Random;
 
 public class ZombieFarmer extends GenericZombieEntity {
     public ZombieFarmer(EntityType<? extends GenericNPC> entityType, World world) {
@@ -24,8 +25,8 @@ public class ZombieFarmer extends GenericZombieEntity {
     }
 
     @Override
-    protected void initEquipment(Random random, LocalDifficulty localDifficulty) {
-        super.initEquipment(random, localDifficulty);
+    protected void initEquipment(LocalDifficulty localDifficulty) {
+        super.initEquipment(localDifficulty);
         Item weapon;
         switch (random.nextInt(4)){
             case 0:

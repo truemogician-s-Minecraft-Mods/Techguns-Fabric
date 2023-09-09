@@ -20,12 +20,13 @@ import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import techguns.TGArmors;
 import techguns.TGEntities;
 import techguns.TGuns;
+
+import java.util.Random;
 
 public class ZombieSoldier extends GenericZombieEntity {
     public ZombieSoldier(EntityType<ZombieSoldier> entityType, World world) {
@@ -37,8 +38,8 @@ public class ZombieSoldier extends GenericZombieEntity {
     }
 
     @Override
-    protected void initEquipment(Random random, LocalDifficulty localDifficulty) {
-        super.initEquipment(random, localDifficulty);
+    protected void initEquipment(LocalDifficulty localDifficulty) {
+        super.initEquipment(localDifficulty);
         Item weapon;
         switch (random.nextInt(4)){
             case 0:

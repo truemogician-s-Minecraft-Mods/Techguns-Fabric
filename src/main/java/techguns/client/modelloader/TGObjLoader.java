@@ -70,9 +70,9 @@ public class TGObjLoader implements ModelResourceProvider, Function<ResourceMana
 
 			try {
 				Identifier modelId = new Identifier(resourceId.getNamespace(), "models/"+resourceId.getPath());
-				Optional<Resource> r = resourceManager.getResource(modelId);
-				if(!r.isEmpty()) {
-					BufferedReader br = new BufferedReader(new InputStreamReader(r.get().getInputStream()));
+				Resource r = resourceManager.getResource(modelId);
+				if(r != null) {
+					BufferedReader br = new BufferedReader(new InputStreamReader(r.getInputStream()));
 
 					ModelLoadParameters params = this.manuallyLoadedModels.getOrDefault(resourceId, DEFAULT_PARAMS);
 

@@ -16,8 +16,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Pair;
 import net.minecraft.world.World;
@@ -266,8 +267,7 @@ public class GenericArmor extends ArmorItem implements FabricItem, ITGItemRender
         for (EquipmentSlot equipmentSlot : EquipmentSlot.values()) {
             Multimap<EntityAttribute, EntityAttributeModifier> multimap = this.getAttributeModifiers(stack, equipmentSlot);
             if (multimap.isEmpty()) continue;
-            list.add(ScreenTexts.EMPTY);
-            list.add(Text.translatable("item.modifiers." + equipmentSlot.getName()).formatted(Formatting.GRAY));
+            list.add(new TranslatableText("item.modifiers." + equipmentSlot.getName()).formatted(Formatting.GRAY));
             for (Map.Entry<EntityAttribute, EntityAttributeModifier> entry : multimap.entries()) {
                 //Don't add armor modifiers to tooltip
                 if (Arrays.stream(HIDE_TOOLTIP_ENIITY_MODIFIERS).anyMatch(entityAttribute -> entityAttribute == entry.getKey())) {
@@ -280,15 +280,15 @@ public class GenericArmor extends ArmorItem implements FabricItem, ITGItemRender
 
                 double e = entityAttributeModifier.getOperation() == EntityAttributeModifier.Operation.MULTIPLY_BASE || entityAttributeModifier.getOperation() == EntityAttributeModifier.Operation.MULTIPLY_TOTAL ? d * 100.0 : (entry.getKey().equals(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE) ? d * 10.0 : d);
                 if (bl) {
-                    list.add(Text.literal(" ").append(Text.translatable("attribute.modifier.equals." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e), Text.translatable(entry.getKey().getTranslationKey()))).formatted(Formatting.DARK_GREEN));
+                    list.add(new LiteralText(" ").append(new TranslatableText("attribute.modifier.equals." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e), new TranslatableText(entry.getKey().getTranslationKey()))).formatted(Formatting.DARK_GREEN));
                     continue;
                 }
                 if (d > 0.0) {
-                    list.add(Text.translatable("attribute.modifier.plus." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e), Text.translatable(entry.getKey().getTranslationKey())).formatted(Formatting.BLUE));
+                    list.add(new TranslatableText("attribute.modifier.plus." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e), new TranslatableText(entry.getKey().getTranslationKey())).formatted(Formatting.BLUE));
                     continue;
                 }
                 if (!(d < 0.0)) continue;
-                list.add(Text.translatable("attribute.modifier.take." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e *= -1.0), Text.translatable(entry.getKey().getTranslationKey())).formatted(Formatting.RED));
+                list.add(new TranslatableText("attribute.modifier.take." + entityAttributeModifier.getOperation().getId(), ItemStack.MODIFIER_FORMAT.format(e *= -1.0), new TranslatableText(entry.getKey().getTranslationKey())).formatted(Formatting.RED));
             }
         }
     }

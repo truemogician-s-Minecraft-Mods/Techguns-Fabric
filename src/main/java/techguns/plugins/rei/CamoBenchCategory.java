@@ -9,9 +9,8 @@ import me.shedaniel.rei.api.client.gui.widgets.Widgets;
 import me.shedaniel.rei.api.client.registry.display.DisplayCategory;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.util.EntryStacks;
-import me.shedaniel.rei.plugin.common.displays.DefaultStoneCuttingDisplay;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableTextContent;
+import net.minecraft.text.TranslatableText;
 import techguns.TGBlocks;
 
 import java.util.Collection;
@@ -30,7 +29,7 @@ public class CamoBenchCategory implements DisplayCategory<CamoBenchDisplay> {
     }
 
     public Text getTitle() {
-        return Text.translatable("block.techguns.camo_bench");
+        return new TranslatableText("block.techguns.camo_bench");
     }
 
     @Override

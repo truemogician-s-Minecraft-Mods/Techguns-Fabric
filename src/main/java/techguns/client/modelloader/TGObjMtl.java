@@ -25,9 +25,9 @@ public class TGObjMtl {
         String dir = p.substring(0,pos);
 
         Identifier mtlid = new Identifier(path.getNamespace(), dir+"/"+name);
-        Optional<Resource> r = rm.getResource(mtlid);
-        if (!r.isEmpty()) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(r.get().getInputStream()));
+        Resource r = rm.getResource(mtlid);
+        if (r != null) {
+            BufferedReader br = new BufferedReader(new InputStreamReader(r.getInputStream()));
 
             while (br.ready()) {
                 String line = br.readLine();

@@ -1,7 +1,6 @@
 package techguns.client.item;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import me.shedaniel.rei.impl.client.gui.widget.basewidgets.TextFieldWidget;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.font.TextRenderer;

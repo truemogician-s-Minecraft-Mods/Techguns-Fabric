@@ -10,7 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -26,6 +25,8 @@ import techguns.api.npc.INPCTechgunsShooter;
 import techguns.entities.ai.RangedAttackGoal;
 import techguns.items.armors.GenericArmor;
 import techguns.items.guns.GenericGun;
+
+import java.util.Random;
 
 public class GenericNPC extends HostileEntity implements RangedAttackMob, INPCTechgunsShooter, ITGShooterValues {
     protected RangedAttackGoal<GenericNPC> rangedAttackGoal = null;
@@ -86,9 +87,8 @@ public class GenericNPC extends HostileEntity implements RangedAttackMob, INPCTe
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
         entityData = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
-        Random random = world.getRandom();
-        this.initEquipment(random, difficulty);
-        this.updateEnchantments(random, difficulty);
+        this.initEquipment(difficulty);
+        this.updateEnchantments(difficulty);
         this.updateAttackType();
 
         return entityData;

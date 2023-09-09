@@ -8,10 +8,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.Vec2f;
-import net.minecraft.util.math.random.Random;
 import techguns.sounds.TGSoundCategory;
 import techguns.util.EntityCondition;
 import techguns.util.MathUtil;
+
+import java.util.Random;
 
 @Environment(EnvType.CLIENT)
 public class TGSound extends MovingSoundInstance {
@@ -52,7 +53,7 @@ public class TGSound extends MovingSoundInstance {
 	}
 	
 	public TGSound(SoundEvent soundname, Entity entity, float volume, float pitch, boolean repeat, TGSoundCategory category) {
-		super(soundname, category.getVanillaCategory(), Random.create());
+		super(soundname, category.getVanillaCategory());
 		this.tgcategory=category;
 		this.volume = volume;
 		this.pitch = pitch;

@@ -7,13 +7,14 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import techguns.TGArmors;
 import techguns.TGEntities;
 import techguns.TGIdentifier;
 import techguns.TGuns;
+
+import java.util.Random;
 
 public class ZombiePoliceman extends GenericZombieEntity {
     public ZombiePoliceman(EntityType<? extends GenericNPC> entityType, World world) {
@@ -31,8 +32,8 @@ public class ZombiePoliceman extends GenericZombieEntity {
     }
 
     @Override
-    protected void initEquipment(Random random, LocalDifficulty localDifficulty) {
-        super.initEquipment(random, localDifficulty);
+    protected void initEquipment(LocalDifficulty localDifficulty) {
+        super.initEquipment(localDifficulty);
         Item weapon;
         switch (random.nextInt(2)) {
             case 0:

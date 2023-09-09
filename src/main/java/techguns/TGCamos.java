@@ -441,7 +441,7 @@ public class TGCamos implements ITGInitializer {
 		return new ArrayList<Identifier>();
 	}
 
-	public static Identifier getRandomCamoFor(ICamoChangeable c, net.minecraft.util.math.random.Random rand)
+	public static Identifier getRandomCamoFor(ICamoChangeable c, Random rand)
 	{
 		CamoList list = weapon_camos.getOrDefault(c, null);
 		if (list!=null && !list.camo_names.isEmpty()){

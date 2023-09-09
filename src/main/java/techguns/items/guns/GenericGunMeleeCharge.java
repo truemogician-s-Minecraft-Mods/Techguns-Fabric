@@ -11,7 +11,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.TagKey;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableTextContent;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Pair;
@@ -166,8 +166,8 @@ public class GenericGunMeleeCharge extends GenericGunCharge {
 			Item head = this.miningHeads[level].item;
 			Text t = head.getName();
 			String itemname = "";
-			if (t instanceof TranslatableTextContent) {
-				itemname = TextUtil.trans(((TranslatableTextContent)t).getKey());
+			if (t instanceof TranslatableText tt) {
+				itemname = TextUtil.trans(tt.getKey());
 			}
 			tooltip.add(Text.of(this.miningHeads[level].text_color+itemname));
 		}

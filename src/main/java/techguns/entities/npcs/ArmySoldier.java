@@ -11,12 +11,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tag.BiomeTags;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import techguns.*;
+
+import java.util.Random;
 
 public class ArmySoldier extends GenericHuman{
     public ArmySoldier(EntityType<? extends GenericNPC> entityType, World world) {
@@ -47,8 +48,8 @@ public class ArmySoldier extends GenericHuman{
     }
 
     @Override
-    protected void initEquipment(Random random, LocalDifficulty localDifficulty) {
-        super.initEquipment(random, localDifficulty);
+    protected void initEquipment(LocalDifficulty localDifficulty) {
+        super.initEquipment(localDifficulty);
         Item weapon;
         switch (random.nextInt(3)){
             case 0:
