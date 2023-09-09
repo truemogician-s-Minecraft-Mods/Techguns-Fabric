@@ -9,19 +9,17 @@ import techguns.packets.PacketPlaySound;
 import techguns.sounds.TGSoundCategory;
 
 public class SoundUtil {
-
+	
 	/**
 	 * Plays a moving Sound on the specified Entity, in front of the entity.
 	 */
 	public static void playSoundOnEntityGunPosition(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, boolean moving, boolean playOnOwnPlayer, TGSoundCategory category, EntityCondition condition) {
-		if (!world.isClient) {
+		if (soundname == null)
+			return;
+		if (!world.isClient)
 			TGPacketsS2C.sendToAllAroundEntity(new PacketPlaySound(soundname, entity, volume, pitch, repeat, moving, true, playOnOwnPlayer, category), entity, 100.0);
-		}else {
-			//MinecraftClient mc = MinecraftClient.getInstance();
-			//if(playOnOwnPlayer || mc.player != entity) {
-			ClientProxy.get().playSoundOnEntity(entity, soundname, volume, pitch, false, moving,true, category, condition);
-			//}
-		}
+		else
+			ClientProxy.get().playSoundOnEntity(entity, soundname, volume, pitch, false, moving, true, category, condition);
 	}
 	
 	/**
@@ -34,25 +32,24 @@ public class SoundUtil {
 	/**
 	 * Plays a moving Sound on the specified Entity, in front of the entity.
 	 */
-	public static void playSoundOnEntityGunPosition(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, boolean moving,  TGSoundCategory category) {
+	public static void playSoundOnEntityGunPosition(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, boolean moving, TGSoundCategory category) {
 		playSoundOnEntityGunPosition(world, entity, soundname, volume, pitch, repeat, moving, false, category);
 	}
 	
 	/**
 	 * Like playSoundOnEntityGunPosition() but does a check for last played own reload.
 	 */
-	public static void playReloadSoundOnEntity(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, boolean moving,  TGSoundCategory category) {
+	public static void playReloadSoundOnEntity(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, boolean moving, TGSoundCategory category) {
 		if (!world.isClient) {
 			TGPacketsS2C.sendToAllAroundEntity(new PacketPlaySound(soundname, entity, volume, pitch, repeat, moving, true, category), entity, 100.0);
-		}else {
+		} else {
 			ClientProxy cp = ClientProxy.get();
-			if (cp.lastReloadsoundPlayed - System.currentTimeMillis()<-500){
+			if (cp.lastReloadsoundPlayed - System.currentTimeMillis() < -500) {
 				cp.lastReloadsoundPlayed = System.currentTimeMillis();
-				cp.playSoundOnEntity(entity, soundname, volume, pitch, repeat, moving,true, category, EntityCondition.NONE);
+				cp.playSoundOnEntity(entity, soundname, volume, pitch, repeat, moving, true, category, EntityCondition.NONE);
 			}
 		}
 	}
-	
 	
 	/**
 	 * Plays a moving Sound on the specified Entity
@@ -73,9 +70,8 @@ public class SoundUtil {
 	public static void playSoundAtEntityPos(World world, Entity entity, SoundEvent soundname, float volume, float pitch, boolean repeat, TGSoundCategory category) {
 		if (!world.isClient) {
 			TGPacketsS2C.sendToAllAroundEntity(new PacketPlaySound(soundname, entity, volume, pitch, repeat, false, false, category), entity, 100.0);
-		}else {
+		} else {
 			ClientProxy.get().playSoundOnEntity(entity, soundname, volume, pitch, repeat, false, false, category);
 		}
 	}
-	
 }
