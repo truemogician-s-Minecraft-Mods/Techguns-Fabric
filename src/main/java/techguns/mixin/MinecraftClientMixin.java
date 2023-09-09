@@ -36,8 +36,8 @@ public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runna
 		ClientDisconnectEvent.EVENT.invoker().onDisconnect((MinecraftClient)(Object)this);
 	}
 	
-	@Inject(at = @At(value="INVOKE", target="Lnet/minecraft/client/network/ClientPlayerEntity;swingHand(Lnet/minecraft/util/Hand;)V"), method ="doAttack()Z", cancellable=true)
-	private void doAttack(CallbackInfoReturnable<Boolean> info) {
+	@Inject(at = @At(value="INVOKE", target="Lnet/minecraft/client/network/ClientPlayerEntity;swingHand(Lnet/minecraft/util/Hand;)V"), method ="doAttack()Z", locals=LocalCapture.CAPTURE_FAILHARD, cancellable=true)
+	private void doAttack(CallbackInfoReturnable<Boolean> info, boolean bl) {
 		PlayerEntity ply = ((MinecraftClient)(Object)this).player;
 		ItemStack stack = ply.getMainHandStack();
 		
@@ -46,16 +46,15 @@ public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runna
 				GenericGunMeleeCharge weapon = (GenericGunMeleeCharge) stack.getItem();
 				
 				if (!weapon.isShootWithLeftClick() && !weapon.shouldSwing(stack)) {
-					info.setReturnValue(false);
-					info.cancel();
 					TGPacketsC2S.sendToServer(new PacketClientSwingRecoil(weapon.getRecoilTime(0f), weapon.getMuzzleFlashTime(0f), Hand.MAIN_HAND, weapon.shouldCheckRecoil(), weapon.getFiresound()));
-
 					//do recoil anim on client for self
 					if (!weapon.shouldCheckRecoil() || !ShooterValues.isStillRecoiling(ply, false, (byte)0)){
 						SoundUtil.playSoundOnEntityGunPosition(ply.world, ply, weapon.getFiresound(), GenericGun.SOUND_DISTANCE, 1.0F, false, false, TGSoundCategory.GUN_FIRE);
 						ShooterValues.setRecoiltime(ply, false, System.currentTimeMillis()+weapon.getRecoilTime(0f), weapon.getRecoilTime(0f),(byte)0);
 						ShooterValues.setMuzzleFlashTime(ply, false, System.currentTimeMillis()+weapon.getMuzzleFlashTime(0f), weapon.getMuzzleFlashTime(0f));
 					}
+					
+					info.setReturnValue(bl);
 				}
 			}
 		}
