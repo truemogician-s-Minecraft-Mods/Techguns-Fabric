@@ -39,7 +39,7 @@ public class PacketCraftAmmoBench extends TGBasePacket {
 
     @Override
     public void handle(PlayerEntity player) {
-        System.out.println("Handling Craft Packet!");
+        //Debug.log("Handling Craft Packet!");
         if (result.isEmpty()) return;
         BlockEntity ent = player.world.getBlockEntity(loc);
         if(ent !=null && ent instanceof AmmoBenchBlockEntity){

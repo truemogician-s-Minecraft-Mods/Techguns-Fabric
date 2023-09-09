@@ -106,10 +106,6 @@ public class ScreenEffect implements IScreenEffect {
 	public void doRender(MatrixStack matrices, VertexConsumerProvider verticesProvider, float progress, float offsetX, float offsetY, float offsetZ, float scale, float rot_x, float rot_y, float rot_z, boolean is3p, String ammoVariant) {
 		//int currentFrame = (int)((float)numSprites*(Math.max(0f, progress-0.00001f))); //Make sure progress never reaches 1.0f
 
-		if (progress > 1.0f) {
-			System.out.println("test");
-		}
-
 		int currentFrame = (int)((float)numSprites*progress) % numSprites;
 		if (currentFrame < numSprites) {
 			int col = currentFrame % cols;

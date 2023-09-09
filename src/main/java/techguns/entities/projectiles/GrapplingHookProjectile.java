@@ -1,5 +1,6 @@
 package techguns.entities.projectiles;
 
+import devutil.Debug;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -96,12 +97,7 @@ public class GrapplingHookProjectile extends GenericProjectile{
 	
 	@Override
 	public void tick() {
-		//TODO: Client?
-//		if (this.world.isClient) {
-//			super.tick();
-//			return;
-//		}
-		System.out.println("GrapplingStatus = "+status);
+		//Debug.log("GrapplingStatus = "+status);
 		
 		// ---
 		if (this.status == GrapplingStatus.LAUNCHING) {
@@ -201,10 +197,10 @@ public class GrapplingHookProjectile extends GenericProjectile{
 			if (this.getOwner().isSneaking()) {
 				this.status = GrapplingStatus.PULL_ENTITY;
 				this.shouldCollide = false;
-			}else {
+			} else {
 				this.status = GrapplingStatus.GRAPPLING_ENTITY;
 				this.shouldCollide = false;
-				System.out.println("New GrapplingStatus = "+status);
+				Debug.log("New GrapplingStatus = "+status);
 			}
 			this.targetEntity = entity;
 			this.playPullSound();
@@ -321,7 +317,7 @@ public class GrapplingHookProjectile extends GenericProjectile{
 				float speed, int TTL, float spread, float dmgDropStart, float dmgDropEnd, float dmgMin,
 				float penetration, boolean blockdamage, EnumBulletFirePos firePos, float radius, double gravity) {
 			GrapplingHookProjectile proj = new GrapplingHookProjectile(TGEntities.GRAPPLING_HOOK_PROJECTILE, world,p,damage,speed,TTL,spread,dmgDropStart,dmgDropEnd,dmgMin,penetration,blockdamage,firePos,gravity);
-			System.out.println("Spawn Grappling Hook Projectile");
+			Debug.log("Spawn Grappling Hook Projectile");
 			return proj;
 		}
 

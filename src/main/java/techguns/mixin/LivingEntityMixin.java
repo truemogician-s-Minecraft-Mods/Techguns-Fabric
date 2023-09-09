@@ -1,5 +1,6 @@
 package techguns.mixin;
 
+import devutil.Debug;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -134,10 +135,10 @@ public abstract class LivingEntityMixin extends Entity implements ITGLivingEntit
 			double reduction = self.getAttributeValue(TGEntityAttributes.ARMOR_FALLDAMAGEREDUCTION);
 			double freeheight = self.getAttributeValue(TGEntityAttributes.ARMOR_FALLFREEHEIGHT);
 
-			//System.out.println("JumpBoost: "+ jumpboost + " Reduction " + reduction + " FreeHeight: " + freeheight + " DamageMult: "+ damageMultiplier);
+			//Debug.log("JumpBoost: "+ jumpboost + " Reduction " + reduction + " FreeHeight: " + freeheight + " DamageMult: "+ damageMultiplier);
 
 			if (jumpboost + reduction + freeheight > 0){
-				//System.out.println("OrgRet: "+ original_return);
+				//Debug.log("OrgRet: "+ original_return);
 
 				PoweredArmor.consumePower(self, EquipmentSlot.FEET, MathHelper.ceil(PoweredArmor.CONSUMPTION_FALLHEIGHT*fallDistance));
 				PoweredArmor.armorActionEffect(TGEntityAttributes.ARMOR_FALLDAMAGEREDUCTION, EquipmentSlot.FEET, self);
@@ -145,7 +146,7 @@ public abstract class LivingEntityMixin extends Entity implements ITGLivingEntit
 				double val = Math.floor(original_return / damageMultiplier);
 
 				int ret = MathHelper.ceil((val - jumpboost - freeheight) * damageMultiplier * MathHelper.clamp(1D-reduction, 0D, 1D));
-				//System.out.println("Val: " + val +"NewRet: "+ ret);
+				//Debug.log("Val: " + val +"NewRet: "+ ret);
 				cir.setReturnValue(ret);
 			}
 		}
@@ -222,7 +223,7 @@ public abstract class LivingEntityMixin extends Entity implements ITGLivingEntit
 				}
 			}
 
-			//System.out.println("Techguns Damage Func!!!");
+			//Debug.log("Techguns Damage Func!!!");
 			
 			self.knockbackVelocity = 0.0F;
 			Entity entity2 = source.getAttacker();
@@ -339,7 +340,7 @@ public abstract class LivingEntityMixin extends Entity implements ITGLivingEntit
 					//TODO Gore chance
 					//if(Math.random()<tgs.goreChance) {
 						if (EntityDeathUtils.hasSpecialDeathAnim(entity, tgs.deathType)) {
-							System.out.println("Entity "+entity.getName().asString()+" got rekt with DT "+tgs.deathType.toString());
+							Debug.log("Entity "+entity.getName().asString()+" got rekt with DT "+tgs.deathType.toString());
 							TGPacketsS2C.sendToAllTracking(new PacketEntityDeathType(entity, tgs.deathType), entity, true);
 						}
 					//}

@@ -14,9 +14,9 @@ public class ItemStackMixin {
             if(server!=null){
                 for(PlayerEntity player : server.getPlayerManager().getPlayerList()){
                     if (stack == player.getMainHandStack()){
-                        System.out.println("Found player!");
+                        Debug.log("Found player!");
                         if(player.isSneaking()){
-                            System.out.println("Sneaking!");
+                            Debug.log("Sneaking!");
                             NbtList enchantments = cir.getReturnValue().copy();
 
                             Identifier identifier = new Identifier("silk_touch");

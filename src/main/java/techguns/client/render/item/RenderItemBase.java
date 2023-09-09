@@ -271,7 +271,7 @@ public class RenderItemBase implements IItemRenderer {
 			BufferBuilder buffer = tessellator.getBuffer();
 			
 			//Vec3d angles = getTransformAngles(ent, handSide, ptt);
-			//System.out.println(String.format("angles: %.3f, %.3f, %.3f", angles.x, angles.y, angles.z));
+			//Debug.log(String.format("angles: %.3f, %.3f, %.3f", angles.x, angles.y, angles.z));
 			
 			//Entity entityIn = Minecraft.getMinecraft().getRenderViewEntity();
 			
@@ -282,8 +282,8 @@ public class RenderItemBase implements IItemRenderer {
 //	        float f5 = MathHelper.cos(entityIn.rotationPitch * 0.017453292F - (float) angles.x);
 			
 			particles.forEach(p -> {
-				//System.out.println("Render Particle!");
-				//System.out.println("Pos:"+p.getPos());
+				//Debug.log("Render Particle!");
+				//Debug.log("Pos:"+p.getPos());
 					
 				//Align to Weapon
 			   p.doRender(buffer, ent, ptt, 1.0f, 1.0f, 0, 0, 0);				

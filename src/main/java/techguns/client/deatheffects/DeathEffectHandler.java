@@ -1,5 +1,6 @@
 package techguns.client.deatheffects;
 
+import devutil.Debug;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -77,8 +78,8 @@ public class DeathEffectHandler {
 		double x = entity.getX();
 		double y = entity.getY() + (entity.getHeight() / 2.0f);
 		double z = entity.getZ();
-
-		System.out.println("CreateDeathEffect for type: " + deathtype);
+		
+		Debug.log("CreateDeathEffect for type: " + deathtype);
 		if (deathtype == DeathType.GORE) {
 			
 			GoreData data = getGoreData(entity.getClass());

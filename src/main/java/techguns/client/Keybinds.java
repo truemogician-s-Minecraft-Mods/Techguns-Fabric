@@ -1,5 +1,6 @@
 package techguns.client;
 
+import devutil.Debug;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
@@ -83,7 +84,7 @@ public class Keybinds implements ITGInitializer{
 				TGPacketsC2S.sendToServer(new PacketTGKeybindPress(TGKeybindID.TOGGLE_STEPASSIST, true));
 			};
 		    while (DEBUG_KEY_RELOAD_FX.wasPressed()) {
-		    	System.out.println("Reloading FXLIST...");
+		    	Debug.log("Reloading FXLIST...");
 				ClientDebugUtil.reloadFXFiles();
 		    	TGFX.FXList = new HashMap<String, TGFXType>();
 		    	TGFX.loadFXList();

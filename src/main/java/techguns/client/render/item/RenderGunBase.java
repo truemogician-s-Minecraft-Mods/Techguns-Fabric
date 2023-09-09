@@ -1,5 +1,6 @@
 package techguns.client.render.item;
 
+import devutil.Debug;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.BipedEntityModel.ArmPose;
@@ -239,7 +240,7 @@ public class RenderGunBase extends RenderItemBase {
 		IGenericGun gun = ((IGenericGun) stack.getItem());
 		ITGShooterValues values = getShooterValues(entityIn);
 		
-		//System.out.println("Render:"+stack+" for "+entityIn);
+		//Debug.log("Render:"+stack+" for "+entityIn);
 		boolean akimbo = false;
 		boolean sneaking = false;
 		boolean isOffhand = false;
@@ -272,8 +273,8 @@ public class RenderGunBase extends RenderItemBase {
 				int dur = entityIn.getItemUseTime();
 
 				chargeProgress = dur / ((GenericGunCharge)stack.getItem()).fullChargeTime;
-
-				System.out.println("chargeProgess = "+chargeProgress);
+				
+				Debug.log("chargeProgess = "+chargeProgress);
 
 				chargeProgressFull = chargeProgress;
 
@@ -295,7 +296,7 @@ public class RenderGunBase extends RenderItemBase {
 				}
 			} else if (attack.isRecoiling()) {
 								
-				//System.out.println(stack+": LeftHand:"+leftHand+ "  Offand:"+isOffhand);
+				//Debug.log(stack+": LeftHand:"+leftHand+ "  Offand:"+isOffhand);
 				
 				long diff = attack.getRecoilTime() - System.currentTimeMillis();
 
@@ -411,7 +412,7 @@ public class RenderGunBase extends RenderItemBase {
 			String ammoVariant = gun.getCurrentAmmoVariantKey(stack);
 			
 			//Draw muzzle FX
-			//System.out.println("muzzleFlashProgress = "+muzzleFlashProgress);
+			//Debug.log("muzzleFlashProgress = "+muzzleFlashProgress);
 
 			if (muzzleFlashProgress>0){
 				if (Mode.FIRST_PERSON_LEFT_HAND== transform || Mode.FIRST_PERSON_RIGHT_HAND == transform ) {
@@ -438,7 +439,7 @@ public class RenderGunBase extends RenderItemBase {
 						matrices.pop();
 					}
 				}if (chargeProgress > 0.0f && this.chargeEffect != null) {
-					//System.out.println("chargeProgess2 = "+chargeProgress);
+					//Debug.log("chargeProgess2 = "+chargeProgress);
 					if (Mode.FIRST_PERSON_LEFT_HAND== transform || Mode.FIRST_PERSON_RIGHT_HAND == transform ) {
 						this.drawChargeFx(matrices, vertexConsumers, chargeProgressFull, attackType, leftHand, ammoVariant);
 					} else {

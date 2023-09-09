@@ -388,16 +388,15 @@ public class TGFX {
 								break;
 							case "}":
 								end = true;
-								//System.out.println("Successfully parsed ParticleSystem "+name);
+								//Debug.log("Successfully parsed ParticleSystem "+name);
 								break;
 						}
 						
 					}
 				}
 				if (error.equals("")) {
-					//count++;
 					FXList.put(name.toLowerCase(), type);
-					//System.out.println("Parsed ParticleSystem" +name+" in file '"+filename+"'.");
+					//Debug.log("Parsed ParticleSystem" +name+" in file '"+filename+"'.");
 				}else{
 					System.err.println("Error(s) while parsing particle "+name+" in file '"+filename+"'.");
 					System.err.println("error");
@@ -414,7 +413,7 @@ public class TGFX {
 		}
 
 		sc.close();
-		//System.out.println("Successfully parsed file "+ filename+ ". " +count + " ParticleSystems loaded.");
+		//Debug.log("Successfully parsed file "+ filename+ ". " +count + " ParticleSystems loaded.");
 		return true;
 
 	}

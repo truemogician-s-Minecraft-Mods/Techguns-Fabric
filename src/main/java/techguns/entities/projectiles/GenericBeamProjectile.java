@@ -113,9 +113,9 @@ public class GenericBeamProjectile extends GenericProjectile{
 			this.setRotation(p.headYaw, p.getPitch());
 //			this.setRotation(p.headYaw +(float) (spread - (2 * Math.random() * spread)) * 40.0f,
 //					p.pitch + (float) (spread - (2 * Math.random() * spread)) * 40.0f);
-			//System.out.println("UPDATE BEAM - pitch:"+pitch+" yaw:"+yaw);
+			//Debug.log("UPDATE BEAM - pitch:"+pitch+" yaw:"+yaw);
 		}else {
-			//System.out.println("OWNER = NULL!");
+			//Debug.log("OWNER = NULL!");
 		}
 
 		//TODO NPC Shooter
@@ -229,7 +229,7 @@ public class GenericBeamProjectile extends GenericProjectile{
 		if (distance <= 0) {
 			distance = this.speed;
 		}
-		//System.out.println("distance="+distance);
+		//Debug.log("distance="+distance);
 		
 		return pos_dst_final;
 			
@@ -239,7 +239,7 @@ public class GenericBeamProjectile extends GenericProjectile{
 	protected void onHitEffect(LivingEntity livingEntity, EntityHitResult entityHitResult) {
 		//Vec3d dir = this.getVelocity().normalize().negate().multiply(0.1);
 		Vec3d pos = entityHitResult.getPos();
-		System.out.println("EntityHit pos:"+pos+", EntityPos:"+entityHitResult.getEntity().getPos());
+		//Debug.log("EntityHit pos:"+pos+", EntityPos:"+entityHitResult.getEntity().getPos());
 		if(!this.world.isClient) {
 			TGPacketsS2C.sendToAllTracking(new PacketSpawnParticle(this.impactFX, pos.x, pos.y, pos.z), this, true);
 			//TGPacketsS2C.sendToAllTracking(new PacketSpawnParticle(this.impactFX, pos.x, pos.y, pos.z, dir.x, dir.y, dir.z), this, true);

@@ -102,7 +102,7 @@ public class FlyingGibs extends Entity{
 
         if (this.onGround)
         {
-        	//System.out.println("onGround.");
+        	//Debug.log("onGround.");
         	if (hitGroundTTL == 0) {
         		hitGroundTTL = timeToLive;
                 trail_system.markDead();

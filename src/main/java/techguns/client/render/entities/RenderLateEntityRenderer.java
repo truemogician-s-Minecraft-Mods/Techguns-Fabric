@@ -26,7 +26,7 @@ public abstract class RenderLateEntityRenderer<T extends Entity> extends EntityR
 
     public static void renderEntities (VertexConsumerProvider.Immediate vertexConsumerProvider, Entity cameraEntity, float tickDelta, MatrixStack matrices, Camera camera, Matrix4f matrix4f){
 
-        //System.out.println("tD: "+tickDelta);
+        //Debug.log("tD: "+tickDelta);
 
         EntityRenderDispatcher dispatcher = MinecraftClient.getInstance().getEntityRenderDispatcher();
         renderQueue.stream().forEach( entity -> {

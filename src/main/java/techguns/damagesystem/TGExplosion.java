@@ -239,7 +239,7 @@ public class TGExplosion {
         {
             Entity entity = list.get(k2);
 
-            //System.out.println("Check entity:"+entity);
+            //Debug.log("Check entity:"+entity);
             
             if (!entity.isImmuneToExplosion()) // && GenericProjectile.BULLET_TARGETS.apply(entity))
             {
@@ -253,8 +253,8 @@ public class TGExplosion {
 	            else if (distance <= secondaryRadius) damage = secondaryDamage + ((distance-primaryRadius)/(secondaryRadius-primaryRadius)) * (primaryDamage-secondaryDamage);
 	            else damage = 0.0;
 	            
-            	//System.out.println("Distance: "+ distance);
-            	//System.out.println("Damage: "+ damage);
+            	//Debug.log("Distance: "+ distance);
+            	//Debug.log("Damage: "+ damage);
             	
 	            //trace blocks
 	            if (damage > 0.0) {
@@ -278,7 +278,7 @@ public class TGExplosion {
 //	            		f = DamageSystem.getDamageFactor((LivingEntity)exploder, (LivingEntity)entity);
 //	            	}
 	            	
-	            	//System.out.println("Attack Damage: "+ damage +" against "+entity);
+	            	//Debug.log("Attack Damage: "+ damage +" against "+entity);
 	            	entity.damage(tgs,  (float)Math.max(0, damage*f));
 
                     if (this.burnsEntities && this.entityFireTime > 0) {
@@ -293,7 +293,7 @@ public class TGExplosion {
         
         //long t_exp3 = System.currentTimeMillis();
         
-		//System.out.println(String.format("BlockPositions: %d ms, BlockBreak: %d ms, Entities: %d ms", t_exp1-t_start, t_exp2-t_exp1, t_exp3-t_exp2));
+		//Debug.log(String.format("BlockPositions: %d ms, BlockBreak: %d ms, Entities: %d ms", t_exp1-t_start, t_exp2-t_exp1, t_exp3-t_exp2));
         
 
     }

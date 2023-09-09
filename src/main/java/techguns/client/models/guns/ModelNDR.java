@@ -404,11 +404,9 @@ public class ModelNDR extends ModelMultipart {
 			this.shape58_2.render(matrices, vertices, light, overlay);
 			this.shape14_7.render(matrices, vertices, light, overlay);
 			this.shape1_5.render(matrices, vertices, light, overlay);
-	
-			//
-			// System.out.println("FireProgress= "+fireProgress);
-	
-	
+			
+			// Debug.log("FireProgress= "+fireProgress);
+			
 			this.GLOW.render(matrices, vertices, bright_light, overlay);
 		}
 		if (part == 1 && fireProgress > 0) {
@@ -443,6 +441,5 @@ public class ModelNDR extends ModelMultipart {
 		}
 
 		//TGRenderHelper.disableBlendMode(RenderType.ALPHA);
-		//
 	}
 }

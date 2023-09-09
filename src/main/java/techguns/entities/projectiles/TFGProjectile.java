@@ -130,7 +130,7 @@ public class TFGProjectile extends GenericProjectile{
 	@Override
 	public void parseAdditionalData(NbtCompound tag) {
 		super.parseAdditionalData(tag);
-		System.out.println("Size = "+tag.getFloat("size"));
+		//Debug.log("Size = "+tag.getFloat("size"));
 		this.size = tag.getFloat("size");
 	}
 	

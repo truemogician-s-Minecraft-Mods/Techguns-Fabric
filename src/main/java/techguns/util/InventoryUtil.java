@@ -172,9 +172,9 @@ public class InventoryUtil {
         		//Check first if amount can be consumed
 				int needed = canConsumeItemFromAmmoBag(ply, ammo);
         		//int needed = canConsumeItem(props.tg_inventory.inventory, ammo,TGPlayerInventory.SLOTS_AMMO_START, TGPlayerInventory.SLOTS_AMMO_END+1);
-        		//System.out.println("needed1:"+needed);
+        		//Debug.log("needed1:"+needed);
         		int needed2 = canConsumeItem(ply.getInventory().main,ammo,0,ply.getInventory().main.size());
-        		//System.out.println("needed2:"+needed);
+        		//Debug.log("needed2:"+needed);
         		if ( needed+needed2 <= amount){
         			
         			//int missing = consumeItem(props.tg_inventory.inventory, ammo,TGPlayerInventory.SLOTS_AMMO_START, TGPlayerInventory.SLOTS_AMMO_END+1);

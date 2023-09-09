@@ -124,9 +124,9 @@ public class GuidedMissileLauncher extends GenericGunCharge {
 					}
 				}
 			}
-//			if (epc.lockOnEntity != null) {
-//				System.out.println("Locking on: "+epc.lockOnEntity.getName()+" - Status: "+epc.lockOnTicks);
-//			}
+			/*if (epc.lockOnEntity != null) {
+				Debug.log("Locking on: "+epc.lockOnEntity.getName()+" - Status: "+epc.lockOnTicks);
+			}*/
 		}
 	}
 	

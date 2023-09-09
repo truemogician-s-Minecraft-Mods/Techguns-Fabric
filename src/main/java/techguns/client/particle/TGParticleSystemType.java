@@ -179,7 +179,7 @@ public class TGParticleSystemType extends TGFXType{
 				
 				if (params.length == 1 ){ //Cylinder (yaw angle)
 					double angle = -params[0];
-					//System.out.printf("Outward, angle=%.3f\n",params[0]);
+					//Debug.log("Outward, angle=%.3f\n",params[0]);
 					return new Vec3d( r*Math.cos(angle),  y, r*Math.sin(angle));
 				}else if (params.length == 3) { //Sphere or Hemisphere
 					return new Vec3d( params[0]*r, params[1]*r, params[2]*r);
@@ -262,7 +262,7 @@ public class TGParticleSystemType extends TGFXType{
 				y = rand.nextFloat()*sys.type.volumeData[1];
 				
 				Vec3d direction = new Vec3d(1.0, 0.0, 0.0).rotateY(angle);
-				//System.out.printf("angle=%.3f,  direction = %.3f / %.3f / %.3f\n", angle, direction.x, direction.y, direction.z);
+				//Debug.log("angle=%.3f,  direction = %.3f / %.3f / %.3f\n", angle, direction.x, direction.y, direction.z);
 				//dir.setValues((float)direction.x, (float)direction.y, (float)direction.z);
 				dir.setValues(angle);
 				

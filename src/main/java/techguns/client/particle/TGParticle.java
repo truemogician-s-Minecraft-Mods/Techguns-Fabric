@@ -102,15 +102,15 @@ public class TGParticle extends Particle implements ITGParticle {
 		    this.angleRateDampingOnGround = MathUtil.randomFloat(random, type.angleRateDampingOnGroundMin, type.angleRateDampingOnGroundMax);
 			
 		    
-		    //System.out.printf("###INIT:Motion1=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
+		    //Debug.log("###INIT:Motion1=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
 		    
 			this.velocityX+=(systemVelocityFactor*particleSystem.motionX());
 			this.velocityY+=(systemVelocityFactor*particleSystem.motionY());
 			this.velocityZ+=(systemVelocityFactor*particleSystem.motionZ());
 			
-			//System.out.printf("###INIT:Motion=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
-			//System.out.println("###INIT:VelType="+this.type.velocityType.toString());
-			//System.out.printf("###INIT:Type.VelocityData=[%.2f, %.2f, %.2f]\n",this.type.velocityDataMin[0], this.type.velocityDataMin[1], this.type.velocityDataMin[2]);
+			//Debug.log("###INIT:Motion=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
+			//Debug.log("###INIT:VelType="+this.type.velocityType.toString());
+			//Debug.log("###INIT:Type.VelocityData=[%.2f, %.2f, %.2f]\n",this.type.velocityDataMin[0], this.type.velocityDataMin[1], this.type.velocityDataMin[2]);
 			
 			this.velX = this.velocityX;
 			this.velY = this.velocityY;
@@ -244,8 +244,8 @@ public class TGParticle extends Particle implements ITGParticle {
 		this.velocityZ = velZ;
 
 		
-		//System.out.printf("Velocity=(%.2f / %.2f / %.2f)\n",this.velX, this.velY, this.velZ);
-		//System.out.printf("Motion=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
+		//Debug.log("Velocity=(%.2f / %.2f / %.2f)\n",this.velX, this.velY, this.velZ);
+		//Debug.log("Motion=(%.2f / %.2f / %.2f)\n",this.motionX, this.motionY, this.motionZ);
 		this.setPos(this.x+this.velocityX, this.y+this.velocityY, this.z+this.velocityZ);
 		this.setBoundingBox(this.getBoundingBox().offset(velocityX, velocityY, velocityZ));
 		

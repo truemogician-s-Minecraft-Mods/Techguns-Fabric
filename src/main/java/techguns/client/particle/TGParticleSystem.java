@@ -85,7 +85,7 @@ public class TGParticleSystem extends Particle implements ITGParticle {
 	public TGParticleSystem(World worldIn,TGParticle part, TGParticleSystemType type) {
 		this(worldIn, type, part.posX(), part.posY(), part.posZ(),0,0,0);
 		this.parent = part;
-		//System.out.println("Spawn attached system : " + type.name);
+		//Debug.log("Spawn attached system : " + type.name);
 	}
 
 	/*public void renderParticle(BufferBuilder buffer, Entity entityIn, float partialTicks, float rotationX, float rotationZ, float rotationYZ, float rotationXY, float rotationXZ) {
@@ -184,7 +184,7 @@ public class TGParticleSystem extends Particle implements ITGParticle {
 				//Get position and motion data
 				DirResult dir = this.type.new DirResult();
 				Vec3d position = type.volumeType.getPosition(this, dir, i, count);
-				//System.out.printf("Dir: %.3f,  %.3f,  %.3f\n", dir[0], dir[1], dir[2]);
+				//Debug.log("Dir: %.3f,  %.3f,  %.3f\n", dir[0], dir[1], dir[2]);
 				//position = position.addVector(type.offset.x, type.offset.y, type.offset.z);
 				Vec3d motion = type.velocityType.getVelocity(this, dir.values);
 				
@@ -193,9 +193,8 @@ public class TGParticleSystem extends Particle implements ITGParticle {
 				
 				//apply ParticleSystem's entity rotation
 				
-				//System.out.println("ParticleSystemRotation - Pitch: "+this.rotationPitch+" - Yaw: "+this.rotationYaw);
-				
-				//System.out.println(String.format("Entity pitch : %.3f,  yaw : %.3f", this.rotationPitch, this.rotationYaw));				
+				//Debug.log("ParticleSystemRotation - Pitch: "+this.rotationPitch+" - Yaw: "+this.rotationYaw);
+				//Debug.log(String.format("Entity pitch : %.3f,  yaw : %.3f", this.rotationPitch, this.rotationYaw));
 				
 				motion = motion.rotateX((float) (-this.rotationPitch*MathUtil.D2R));
 				motion = motion.rotateY((float) ((-this.rotationYaw)*MathUtil.D2R));
@@ -203,8 +202,8 @@ public class TGParticleSystem extends Particle implements ITGParticle {
 					position = position.rotateX((float) (-this.rotationPitch*MathUtil.D2R));
 					position = position.rotateY((float) ((-this.rotationYaw)*MathUtil.D2R));		
 				}
-				//System.out.println("Motion: ("+motion.x+ ", "+motion.y + ", "+ motion.z+")");
-				//System.out.println("Position: ("+position.x+ ", "+position.y + ", "+ position.z+")");
+				//Debug.log("Motion: ("+motion.x+ ", "+motion.y + ", "+ motion.z+")");
+				//Debug.log("Position: ("+position.x+ ", "+position.y + ", "+ position.z+")");
 				
 				//Spawn particle
 				double mf = 0.05D; //Per Second instead of Per Tick

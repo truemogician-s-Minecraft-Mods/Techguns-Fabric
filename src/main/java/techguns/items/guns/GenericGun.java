@@ -1,5 +1,6 @@
 package techguns.items.guns;
 
+import devutil.Debug;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -561,7 +562,7 @@ public class GenericGun extends GenericItem implements IGenericGun, ITGItemRende
 	
     		int ammo = this.getCurrentAmmo(stack);
     	
-    		//System.out.println("Shoot gun:"+stack+" Hand:"+hand);
+    		//Debug.log("Shoot gun:"+stack+" Hand:"+hand);
     		
     		byte ATTACK_TYPE = 0;
     		ITGExtendedPlayer extendedPlayer = (ITGExtendedPlayer)player;
@@ -633,7 +634,7 @@ public class GenericGun extends GenericItem implements IGenericGun, ITGItemRende
 
 			        	
 			        	if (!checkRecoil || !ShooterValues.isStillRecoiling(player,hand==Hand.OFF_HAND, ATTACK_TYPE) ){
-			        		//System.out.println("SettingRecoilTime");
+			        		//Debug.log("SettingRecoilTime");
 				        	ShooterValues.setRecoiltime(player, hand==Hand.OFF_HAND,System.currentTimeMillis() + recoiltime_l, recoiltime_l,ATTACK_TYPE);
 				        	
 			        	}
@@ -674,7 +675,7 @@ public class GenericGun extends GenericItem implements IGenericGun, ITGItemRende
 		        	
 			        
 		    	} else {
-		    		//System.out.println(Thread.currentThread().toString()+": Skip shot, can't fire yet");
+		    		//Debug.log(Thread.currentThread().toString()+": Skip shot, can't fire yet");
 		    	}
 		    	
     		} else {
@@ -1207,8 +1208,8 @@ public class GenericGun extends GenericItem implements IGenericGun, ITGItemRende
     		//accscale=1.0f;
     		firePos=EnumBulletFirePos.CENTER;
     	}*/
-
-		System.out.println("fireWeaponFromNPC: "+ shooter);
+	    
+	    Debug.log("Fire weapon from NPC: "+ shooter);
 
     	if (!shooter.world.isClient()){
     		this.shootGun(shooter.world, shooter, shooter.getStackInHand(hand), this.zoombonus*accscale,dmgscale,0, hand, firePos, null);

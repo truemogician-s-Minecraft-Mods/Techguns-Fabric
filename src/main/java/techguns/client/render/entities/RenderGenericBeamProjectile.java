@@ -53,7 +53,7 @@ public class RenderGenericBeamProjectile extends RenderLateEntityRenderer<Generi
 
 		//tickDelta = 0.0f;
 
-		//System.out.println("tD: "+tickDelta);
+		//Debug.log("tD: "+tickDelta);
 
 		// Generic stuff for all beam types
 		Random rand = new Random(entity.getId());
@@ -107,7 +107,7 @@ public class RenderGenericBeamProjectile extends RenderLateEntityRenderer<Generi
 				if (shooter instanceof PlayerEntity && MinecraftClient.getInstance().options.bobView) {
 					Vec3d vb_offset = getViewBobbingOffset((PlayerEntity)shooter, tickDelta); //.multiply(10);
 
-					//System.out.println("vb_offset:"+vb_offset);
+					//Debug.log("vb_offset:"+vb_offset);
 					offsetX+=vb_offset.x;
 					offsetY+=vb_offset.y;
 					offsetZ+=vb_offset.z;
@@ -131,7 +131,7 @@ public class RenderGenericBeamProjectile extends RenderLateEntityRenderer<Generi
 			pos = new Vec3d(posX, posY, posZ).add(offset_rot); //.multiply(offsetForward));
 			//pos = new Vec3d(posX, posY, posZ); //.multiply(offsetForward));
 
-			//System.out.println("pos: ("+pos+")");
+			//Debug.log("pos: ("+pos+")");
 		} else {
 			laser_pitch = entity.laserPitch;
 			laser_yaw = entity.laserYaw;
@@ -196,10 +196,7 @@ public class RenderGenericBeamProjectile extends RenderLateEntityRenderer<Generi
 
 		matrixStack.translate(pos.x-ex, pos.y-ey, pos.z-ez);
 
-		//System.out.println("Entity - pitch:"+entity.getPitch()+" yaw:"+entity.getYaw()
-		System.out.println("BEAM - pitch: " + pitch + " - yaw: " + yaw + " - pos = ("+(pos.x-ex)+", "+(pos.y-ey)+", "+(pos.z-ez)+")");
-
-		// System.out.println("tD: "+tickDelta);
+		//Debug.log("BEAM - pitch: " + pitch + " - yaw: " + yaw + " - pos = ("+(pos.x-ex)+", "+(pos.y-ey)+", "+(pos.z-ez)+")");
 
 		matrixStack.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(-(yaw - 90.0F)));
 		matrixStack.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(pitch));
@@ -448,7 +445,7 @@ public class RenderGenericBeamProjectile extends RenderLateEntityRenderer<Generi
 			float pulse = (float) (1.0f - Math.sqrt(Math.abs(prog-d)*2.0f));
 			//1-WURZEL(ABS(B2-C2))
 
-			//System.out.printf("X/Y/Z: (%2.2f/%2.2f/%2.2f)\n",x,y,z);
+			//Debug.log("X/Y/Z: (%2.2f/%2.2f/%2.2f)\n",x,y,z);
 			float width =  Math.max(0.0f, WIDTH*pulse); //WIDTH+(WIDTH*10.0*pulse);
 			if (i >= 1) {
 				drawSegment(matrixStack, vertexConsumer, xprev, yprev, zprev, x,y,z, widthprev, width, alphaprev, pulse, light);

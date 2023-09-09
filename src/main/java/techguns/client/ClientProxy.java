@@ -1,5 +1,6 @@
 package techguns.client;
 
+import devutil.Debug;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
@@ -737,7 +738,7 @@ public class ClientProxy implements ClientModInitializer {
 				MinecraftClient.getInstance().getSoundManager().play(new TGSound(soundname,entity,volume,pitch, repeat, moving, gunPosition,soundCategory));
 			}
 		} else {
-			//System.out.println("Handle Sound entity null, NEED FIX!");
+			Debug.log("Handle Sound entity null, NEED FIX!");
 		}
 	}	
 	

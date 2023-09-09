@@ -81,7 +81,7 @@ public class MagicRifleProjectile extends GenericProjectile{
 
     @Override
     public void tick() {
-        //System.out.println("post_impact_ticks: "+this.postImpactTicks);
+        //Debug.log("post_impact_ticks: "+this.postImpactTicks);
         if (this.postImpactTicks-- > 0) {
             getProjType().handlePostImpactTick(this);
             if (this.postImpactTicks <= 0) {
@@ -303,7 +303,7 @@ public class MagicRifleProjectile extends GenericProjectile{
         public boolean handleRemoval(MagicRifleProjectile proj) {
             if (proj.ticksToLive > 0 && proj.chargeAmount > 0.25f) {
                 proj.postImpactTicks = 10 + (int)(proj.chargeAmount* 30);
-                //System.out.println("set post_impact_ticks: "+proj.postImpactTicks);
+                //Debug.log("set post_impact_ticks: "+proj.postImpactTicks);
                 return true;
             }
             return false;

@@ -39,7 +39,7 @@ public class RenderGrapplingHookProjectile extends EntityRenderer<GrapplingHookP
 		//Render Projectile
 		matrices.push();
 		
-		//System.out.println("Render Grappling Hook with TickDelta = "+tickDelta);
+		//Debug.log("Render Grappling Hook with TickDelta = "+tickDelta);
 	
        	TGMatrixOps.rotate(matrices, entity.prevYaw + (entity.getYaw()-entity.prevYaw)*tickDelta -90.0f, 0F, 1F, 0F);
        	TGMatrixOps.rotate(matrices, entity.prevPitch + (entity.getPitch()-entity.prevPitch)*tickDelta, 0F, 0F, 1F);

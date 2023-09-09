@@ -102,11 +102,11 @@ public abstract class TGPlayerEntityMixinClient extends LivingEntity implements 
 				
 				//Reset lock if out of ammo
 				if (!stack.isEmpty() && stack.getItem() instanceof GenericGunCharge && ((GenericGunCharge) stack.getItem()).getLockOnTicks() > 0) {
-					//System.out.println("RMB: "+cp.keyFirePressedOffhand);
+					//Debug.log("RMB: "+cp.keyFirePressedOffhand);
 					if (((GenericGunCharge)stack.getItem()).getAmmoLeft(stack) <= 0 && props.getLockOnEntity() != null) {
 						props.setLockOnEntity(null);
 						props.setLockOnTicks(-1);
-						//System.out.println("reset lock.");
+						//Debug.log("reset lock.");
 					}
 				}
 
